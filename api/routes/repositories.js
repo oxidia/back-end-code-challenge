@@ -1,6 +1,6 @@
 const router = require('express').Router();
-const axios = require('axios');
+const repositoriesController = require('../controllers/repositories');
 
-router.get('/', (req, res, next) => {});
+router.get('/languages', repositoriesController.languages);
 
 module.exports = router;
