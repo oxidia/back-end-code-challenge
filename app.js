@@ -1,12 +1,14 @@
 const createError = require('http-errors');
 const express = require('express');
 const logger = require('morgan');
+const cors = require('cors');
 const path = require('path');
 
 const repositoriesRouter = require('./api/routes/repositories');
 
 const app = express();
 
+app.use(cors());
 app.use(logger('dev'));
 app.use(express.static(path.join(__dirname, '/public')));
 app.use(express.json());
