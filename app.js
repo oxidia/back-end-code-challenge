@@ -4,6 +4,8 @@ const logger = require('morgan');
 const cors = require('cors');
 const path = require('path');
 
+const API_VERSION = '1';
+
 const repositoriesRouter = require('./api/routes/repositories');
 
 const app = express();
@@ -14,7 +16,7 @@ app.use(express.static(path.join(__dirname, '/public')));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 
-app.use('/api/v1/repositories', repositoriesRouter);
+app.use(`/api/v${API_VERSION}/repositories`, repositoriesRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
