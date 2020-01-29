@@ -1,11 +1,11 @@
 {
   "name": "back-end-code-challenge",
   "version": "1.0.0",
-  "description": "UnitedRemote back-end code challenge.",
-  "main": "index.js",
+  "description": "Gemography back-end code challenge.",
+  "main": "bin/www",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodemon bin/www"
+    "start": "node bin/www"
   },
   "repository": {
     "type": "git",
