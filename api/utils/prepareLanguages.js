@@ -4,7 +4,10 @@ const axios = require('axios');
 module.exports = async () => {
   const languages = {};
 
-  const { data } = await axios.get('https://github-trending-api.now.sh');
+  let { data } = await axios.get('https://github-trending-api.now.sh');
+
+  // Ensure that just 100 trending repository will be treated.
+  data = data.slice(0, 100);
 
   // Calculate data for every language
   data.forEach(repo => {
