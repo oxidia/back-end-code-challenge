@@ -25,6 +25,7 @@ class Language {
     return {
       name: reference.name,
       url: reference.url,
+      description: reference.description,
       stars: reference.stars,
       forks: reference.forks
     };
