@@ -3,10 +3,92 @@
   <head>
     <title>API</title>
     <link rel="stylesheet" href="/css/index.css" />
+    <!-- <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bulma@0.8.0/css/bulma.min.css"
+    /> -->
   </head>
 
   <body>
-    <h1>Github Trending Repositories - API</h1>
-    <p>API 1.0.0</p>
+    <main class="container">
+      <h1 class="big-title">Github Trending Repositories languages - API</h1>
+      <h2 class="small-title">API 1.0.0</h2>
+      <section class="routes">
+        <div class="details">
+          <div class="route">
+            <div class="value">
+              <div class="title">
+                <span class="green--text">GET</span> Get languages
+              </div>
+              <div class="url">
+                <span>
+                  /api/v1/repositories/languages
+                </span>
+              </div>
+              <div class="description">
+                <span class="text">
+                  Retrieve languages used by a 100 trending Github repositories
+                </span>
+              </div>
+            </div>
+            <div class="headers">
+              <div class="title">
+                <span>
+                  Parameters
+                </span>
+              </div>
+              <div class="body">
+                <table>
+                  <thead>
+                    <tr>
+                      <th>Name</th>
+                      <th>Type</th>
+                      <th>Values</th>
+                      <th>Description</th>
+                    </tr>
+                  </thead>
+                  <tr>
+                    <td><span class="chip">sort</span></td>
+                    <td><span class="chip">string</span></td>
+                    <td>
+                      <span class="chip">name</span>
+                      <span class="chip">repos_count</span>
+                    </td>
+                    <td>Specify sort option</td>
+                  </tr>
+                  <tr>
+                    <td><span class="chip">order</span></td>
+                    <td><span class="chip">string</span></td>
+                    <td>
+                      <span
+                        ><span class="chip">aec</span>
+                        <span class="chip">desc</span></span
+                      >
+                    </td>
+                    <td>
+                      Specify sort order
+                    </td>
+                  </tr>
+                </table>
+              </div>
+            </div>
+            <div class="headers">
+              <div class="title">
+                <span>
+                  Headers
+                </span>
+              </div>
+              <div class="body">
+                <div class="option">
+                  <label>Content-Type:</label>
+                  <span>application/json</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="examples"></div>
+      </section>
+    </main>
   </body>
 </html>
