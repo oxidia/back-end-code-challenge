@@ -17,7 +17,7 @@ npm install && npm start
 
 ## Documentation
 ```sh
-GET /api/v1
+GET /
 ```
 
 ## Note
