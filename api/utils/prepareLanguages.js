@@ -1,7 +1,7 @@
 const { Language } = require('../helpers');
 const axios = require('axios');
 
-module.exports = async () => {
+module.exports = async options => {
   const languages = {};
 
   let { data } = await axios.get('https://github-trending-api.now.sh');
@@ -32,6 +32,10 @@ module.exports = async () => {
 
     result.push(lang);
   }
+
+  result.sort((a, b) => {
+    return Language.compare(a, b, options);
+  });
 
   return result;
 };

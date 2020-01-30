@@ -1,4 +1,31 @@
 class Language {
+  static compare(a, b, options) {
+    const { sort, order } = options;
+
+    const order_value = order === 'asc' ? 1 : -1;
+    let compare_value;
+
+    switch (sort) {
+      case 'repos_count':
+        {
+          compare_value = a.repositoriesCount - b.repositoriesCount;
+          if (compare_value !== 0) break;
+        }
+
+      case 'name': {
+        compare_value = a.name.localeCompare(b.name);
+        break;
+      }
+
+      default: {
+        compare_value = 1;
+        break;
+      }
+    }
+
+    return compare_value * order_value;
+  }
+
   constructor(name) {
     this._name = name;
     this._repositoriesCount = 0;
